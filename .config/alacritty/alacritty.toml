@@ -1,0 +1,25 @@
+# Check https://alacritty.org/config-alacritty.html to understand each config
+
+live_config_reload = true
+
+# ENV
+# All key-value pairs in the [env] section will be added as
+# environment variables for any process spawned by Alacritty,
+# including its shell. Some entries may override variables
+# set by alacritty itself.
+[env]
+
+[window]
+
+[scrolling]
+history = 100000
+multiplier = 3
+
+[font]
+normal.family = "FiraCode Nerd Font"
+bold.family = "FiraCode Nerd Font"
+italic.family = "FiraCode Nerd Font"
+bold_italic.family = "FiraCode Nerd Font"
+
+[selection]
+save_to_clipboard = true
