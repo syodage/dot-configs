@@ -1,5 +1,9 @@
 # Check https://alacritty.org/config-alacritty.html to understand each config
 
+import = [
+    "~/.config/alacritty/themes/themes/night_owl.toml"
+]
+
 live_config_reload = true
 
 # ENV
@@ -15,11 +19,21 @@ live_config_reload = true
 history = 100000
 multiplier = 3
 
-[font]
-normal.family = "FiraCode Nerd Font"
-bold.family = "FiraCode Nerd Font"
-italic.family = "FiraCode Nerd Font"
-bold_italic.family = "FiraCode Nerd Font"
+[font.bold]
+family = "FiraCode Nerd Font"
+style = "FiraCode Nerd Font"
+
+[font.bold_italic]
+family = "FiraCode Nerd Font"
+style = "FiraCode Nerd Font"
+
+[font.italic]
+family = "FiraCode Nerd Font"
+style = "FiraCode Nerd Font"
+
+[font.normal]
+family = "FiraCode Nerd Font"
+style = "FiraCode Nerd Font"
 
 [selection]
 save_to_clipboard = true
