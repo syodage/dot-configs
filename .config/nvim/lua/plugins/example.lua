@@ -8,6 +8,27 @@ if true then return {} end
 -- * add extra plugins
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
+--
+-- Adding a new plugin
+-- return {
+--   -- add symbols-outline
+--   {
+--     "simrat39/symbols-outline.nvim",
+--     cmd = "SymbolsOutline",
+--     keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
+--     opts = {
+--       -- add your options that should be passed to the setup() function here
+--       position = "right",
+--     },
+--   },
+-- }
+
+-- To Disable a plugin
+-- return {
+--   -- disable trouble
+--   { "folke/trouble.nvim", enabled = false },
+-- }
+
 return {
   -- add gruvbox
   { "ellisonleao/gruvbox.nvim" },
