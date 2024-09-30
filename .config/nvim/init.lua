@@ -1,2 +1,5 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
-require("config.lazy")
+-- require("lazy.config.lazy")
+
+-- Custom configs
+require("syodage")
