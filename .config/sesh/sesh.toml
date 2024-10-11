@@ -1,0 +1,12 @@
+[default_session]
+startup_command = "nvim -c ':Telescope find_files'"
+
+[[session]]
+name = "Tmux-Config"
+path = "~/.config/tmux"
+startup_command = "nvim tmux.conf"
+
+[[session]]
+name = "Neovim-Configs"
+path = "~/.config/nvim"
+startup_command = "nvim init.lua"
