@@ -1,6 +1,8 @@
 return {
   { -- Collection of various small independent plugins/modules
     "echasnovski/mini.nvim",
+    version = "*",
+    event = { "BufReadPre", "BufNewFile" },
     config = function()
       -- Better Around/Inside textobjects
       --
@@ -17,23 +19,27 @@ return {
       -- - sr)'  - [S]urround [R]eplace [)] [']
       require("mini.surround").setup()
 
-      -- Simple and easy statusline.
-      --  You could remove this setup call if you don't like it,
-      --  and try some other statusline plugin
-      local statusline = require("mini.statusline")
-      -- set use_icons to true if you have a Nerd Font
-      statusline.setup({ use_icons = vim.g.have_nerd_font })
+      -- Show indentation scope with a line.
+      require("mini.indentscope").setup()
 
-      -- You can configure sections in the statusline by overriding their
-      -- default behavior. For example, here we set the section for
-      -- cursor location to LINE:COLUMN
-      ---@diagnostic disable-next-line: duplicate-set-field
-      statusline.section_location = function()
-        return "%2l:%-2v"
-      end
+      -- Auto pair
+      require("mini.pairs").setup()
 
+      -- Smart split and join.
+      require("mini.splitjoin").setup()
+
+      require("mini.surround").setup()
+
+      -- Move selected text all four directions.
+      require("mini.move").setup()
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
+  },
+  {
+    "echasnovski/mini.starter",
+    version = "*",
+    event = "VimEnter",
+    opts = {},
   },
 }

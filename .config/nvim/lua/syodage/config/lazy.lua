@@ -135,6 +135,12 @@ keymap("n", "<TAB>", "<CMD>bnext<CR>", "Go to next buffer")
 keymap("n", "<S-TAB>", "<CMD>bprevious<CR>", "Go to previous buffer")
 keymap("n", "<C-s>", "<CMD>w<CR>", "Save current buffer")
 
+-- Quickfix list.
+keymap("n", "<leader>qf", "<CMD>copen<CR>", "Open [Q]uick[f]ix list")
+keymap("n", "<leader>qc", "<CMD>cclose<CR>", "Close [Q]uick[f]ix list")
+keymap("n", "<leader>cn", "<CMD>cnext<CR>", "Forward [Q]uick[f]ix list")
+keymap("n", "<leader>cp", "<CMD>cprev<CR>", "Backward [Q]uick[f]ix list")
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
